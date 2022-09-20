@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Sze 20. 13:14
+-- Létrehozás ideje: 2022. Sze 20. 13:21
 -- Kiszolgáló verziója: 10.4.20-MariaDB
 -- PHP verzió: 7.3.29
 
@@ -58,7 +58,7 @@ INSERT INTO `termek` (`id`, `termek_neve`, `kategoria`, `termek_ara`, `termek_ke
 (14, 'Samsung Galaxy S22 5G 128GB 8GB RAM Dual (SM-S901B) Mobiltelefon', 'Telefon', 250000, '14_nk.jpg', '14_kk.jpg', 19),
 (15, 'Apple iPhone 14 Pro 128GB Mobiltelefon', 'Telefon', 570000, '15_nk.jpg', '15_kk.jpg', 300),
 (16, 'Xiaomi Redmi Note 11 128GB 4GB RAM Dual Mobiltelefon', 'Telefon', 72000, '16_nk.jpg', '16_kk.jpg', 5),
-(17, 'Nokia 8210 4G Dual Mobiltelefon', 'Telefon', 31000, '17_nk.jpg', '17_nk.jpg', 1),
+(17, 'Nokia 8210 4G Dual Mobiltelefon', 'Telefon', 31000, '17_nk.jpg', '17_kk.jpg', 1),
 (18, 'Nokia 105 (2019) Mobiltelefon', 'Telefon', 5000, '18_nk.jpg', '18_kk.jpg', 2),
 (19, 'Blaupunkt BS06 Mobiltelefon', 'Telefon', 4290, '19_nk.jpg', '19_kk.jpg', 4),
 (20, 'Alcatel 1066G Mobiltelefon', 'Telefon', 3500, '20_nk.jpg', '20_kk.jpg', 50),
@@ -72,24 +72,24 @@ INSERT INTO `termek` (`id`, `termek_neve`, `kategoria`, `termek_ara`, `termek_ke
 (28, 'Samsung Galaxy Watch 5 40mm SM-R900', 'Okosóra', 88000, '28_nk.jpg', '28_kk.jpg', 100),
 (29, 'Xiaomi Redmi Watch 2 Lite', 'Okosóra', 54000, '29_nk.jpg', '29_kk.jpg', 200),
 (30, 'Apple Watch SE GPS 44mm', 'Okosóra', 110000, '30_nk.jpg', '30_kk.jpg', 97),
-(31, 'LG 55NANO753PR NanoCell Smart LED TV, 139 cm, 4K Ultra HD, HDR, webOS ThinQ AI', 'TV', 194990, '31_nk_jpg\r\n', '31_kk_jpg', 2),
-(32, 'Samsung UE75TU7022KXXH Smart LED Televízió, 189 cm, 4K Ultra HD\r\n', 'TV', 309990, '32_nk_jpg', '32_kk_jpg', 3),
-(33, 'Star-Light 22SLTA1500HSA Smart LED Televízió, 55 cm, HD, Android 9.0', 'TV', 47990, '33_nk_jpg', '33_kk_jpg', 8),
-(34, 'Samsung 55TU7092 Smart LED Televízió, 138 cm, 4K Ultra HD', 'TV', 211990, '34_nk_jpg', '34_kk_jpg', 5),
-(35, 'Philips 39PHS6707/12 Smart LED Televízió, 98 cm, HD Ready, Fekete, Android', 'TV', 114990, '35_nk_jpg', '36_kk_jpg', 1),
-(36, 'LG 43UP75003LF Smart LED TV, 108 cm, 4K Ultra HD, HDR, webOS ThinQ AI', 'TV', 129990, '36_nk_jpg', '36_kk_jpg', 6),
-(37, 'Samsung UE55TU7022KXXH Smart LED Televízió, 138 cm, 4K Ultra HD', 'TV', 178664, '37_nk_jpg', '37_kk_jpg', 4),
-(38, 'Samsung UE32T4302A Smart LED Televízió, 80 cm, HD Ready', 'TV', 87990, '38_nk_jpg', '38_kk_jpg', 1),
-(39, 'Samsung UE50TU7022KXXH Smart LED Televízió, 125 cm, 4K Ultra HD', 'TV', 143990, '39_nk_jpg', '39_kk_jpg', 4),
-(40, 'Samsung UE43TU7022KXXH Smart LED Televízió, 108 cm, 4K Ultra HD', 'TV', 123999, '40_nk_jpg', '40_kk_jpg', 3),
+(31, 'LG 55NANO753PR NanoCell Smart LED TV, 139 cm, 4K Ultra HD, HDR, webOS ThinQ AI', 'TV', 194990, '31_nk.jpg\r\n', '31_kk.jpg', 2),
+(32, 'Samsung UE75TU7022KXXH Smart LED Televízió, 189 cm, 4K Ultra HD\r\n', 'TV', 309990, '32_nk.jpg', '32_kk.jpg', 3),
+(33, 'Star-Light 22SLTA1500HSA Smart LED Televízió, 55 cm, HD, Android 9.0', 'TV', 47990, '33_nk.jpg', '33_kk.jpg', 8),
+(34, 'Samsung 55TU7092 Smart LED Televízió, 138 cm, 4K Ultra HD', 'TV', 211990, '34_nk.jpg', '34_kk.jpg', 5),
+(35, 'Philips 39PHS6707/12 Smart LED Televízió, 98 cm, HD Ready, Fekete, Android', 'TV', 114990, '35_nk.jpg', '36_kk.jpg', 1),
+(36, 'LG 43UP75003LF Smart LED TV, 108 cm, 4K Ultra HD, HDR, webOS ThinQ AI', 'TV', 129990, '36_nk.jpg', '36_kk.jpg', 6),
+(37, 'Samsung UE55TU7022KXXH Smart LED Televízió, 138 cm, 4K Ultra HD', 'TV', 178664, '37_nk.jpg', '37_kk.jpg', 4),
+(38, 'Samsung UE32T4302A Smart LED Televízió, 80 cm, HD Ready', 'TV', 87990, '38_nk.jpg', '38_kk.jpg', 1),
+(39, 'Samsung UE50TU7022KXXH Smart LED Televízió, 125 cm, 4K Ultra HD', 'TV', 143990, '39_nk.jpg', '39_kk.jpg', 4),
+(40, 'Samsung UE43TU7022KXXH Smart LED Televízió, 108 cm, 4K Ultra HD', 'TV', 123999, '40_nk.jpg', '40_kk.jpg', 3),
 (41, 'ASUS VivoBook X515MA-BQ772WS Notebook', 'Laptop', 79899, '41_nk.jpg', '41_kk.jpg', 13),
-(42, 'ASUS ZenBook 14X UX5401EA-L7099W Notebook', 'Laptop', 349900, '42_nk.jpg', '42_nk.jpg', 3),
+(42, 'ASUS ZenBook 14X UX5401EA-L7099W Notebook', 'Laptop', 349900, '42_nk.jpg', '42_kk.jpg', 3),
 (43, 'UMAX VisionBook N14G Plus UMM230148 Notebook', 'Laptop', 49900, '43_nk.jpg', '43_kk.jpg', 3),
 (44, 'ASUS VivoBook 17 X705MA(GML-R)-BX232W Notebook', 'Laptop', 179900, '44_nk.jpg', '44_kk.jpg', 9),
 (45, 'Lenovo IdeaPad 3 82H8025RHV Notebook', 'Laptop', 199900, '45_nk.jpg', '45_kk.jpg', 2),
 (46, 'ASUS ZenBook 14X UM5401QA-L7208W Notebook', 'Laptop', 299890, '46_nk.jpg', '46_kk.jpg', 15),
 (47, 'ASUS ROG STRIX G15 G513IH-HN004 Notebook', 'Laptop', 299900, '47_nk.jpg', '47_kk.jpg', 5),
-(48, 'Apple MacBook Air 13.3 M1 8GB 256GB MGN63 Notebook', 'Laptop', 417000, '48_nk.jpg', '48_nk.jpg', 41),
+(48, 'Apple MacBook Air 13.3 M1 8GB 256GB MGN63 Notebook', 'Laptop', 417000, '48_nk.jpg', '48_kk.jpg', 41),
 (49, 'ASUS VivoBook X712EA-AU693 Notebook\r\nÖsszehasonlítás\r\nASUS VivoBook X712EA-AU693 Notebook ', 'Laptop', 129900, '49_nk.jpg', '49_kk.jpg', 16),
 (50, 'ASUS X515EA-BQ1187 Notebook', 'Laptop', 174900, '50_nk.jpg', '50_kk.jpg', 35);
 
