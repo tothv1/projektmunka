@@ -57,7 +57,7 @@ if (mysqli_num_rows($result) > 0) {
      "<td>" .$row["termek_ara"]."</td>" .
      "<td>" .$row["termek_kepe_nagy"]."</td>" .
      "<td>" .$row["termek_kepe_kicsi"]."</td>" .
-     "<td>" .$row["mennyiseg"]."</td>" . "<br>";
+     "<td>" .$row["mennyiseg"]."</td>" ;
 
      echo "</tr>" ;
 
