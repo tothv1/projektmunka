@@ -1,4 +1,16 @@
-table, td{
+table, td, th{
+    border-collapse: collapse;
     border:1px solid black;
     text-align: center;
+}
+
+th {
+    padding: 20px;
+}
+tr {
+    background-color: #42cef5;
+}
+
+tr:nth-child(even) {
+    background-color: lightblue;
 }
