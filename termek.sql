@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Gep: 127.0.0.1
--- Letrehozas ideje: 2022. Sze 20. 13:21
--- Kiszolgalo verzioja: 10.4.20-MariaDB
--- PHP verzio: 7.3.29
+-- Gép: mysql.omega:3306
+-- Létrehozás ideje: 2022. Sze 29. 13:07
+-- Kiszolgáló verziója: 5.7.39-log
+-- PHP verzió: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbazis: `webaruhaz`
+-- Adatbázis: `kg3`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabla szerkezet ehhez a tablahoz `termek`
+-- Tábla szerkezet ehhez a táblához `termek`
 --
 
 CREATE TABLE `termek` (
@@ -38,7 +39,7 @@ CREATE TABLE `termek` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
--- A tabla adatainak kiiratasa `termek`
+-- A tábla adatainak kiíratása `termek`
 --
 
 INSERT INTO `termek` (`id`, `termek_neve`, `kategoria`, `termek_ara`, `termek_kepe_nagy`, `termek_kepe_kicsi`, `mennyiseg`) VALUES
@@ -90,25 +91,25 @@ INSERT INTO `termek` (`id`, `termek_neve`, `kategoria`, `termek_ara`, `termek_ke
 (46, 'ASUS ZenBook 14X UM5401QA-L7208W Notebook', 'Laptop', 299890, '46_nk.jpg', '46_kk.jpg', 15),
 (47, 'ASUS ROG STRIX G15 G513IH-HN004 Notebook', 'Laptop', 299900, '47_nk.jpg', '47_kk.jpg', 5),
 (48, 'Apple MacBook Air 13.3 M1 8GB 256GB MGN63 Notebook', 'Laptop', 417000, '48_nk.jpg', '48_kk.jpg', 41),
-(49, 'ASUS VivoBook X712EA-AU693 Notebook\r\nÖsszehasonlitas\r\nASUS VivoBook X712EA-AU693 Notebook ', 'Laptop', 129900, '49_nk.jpg', '49_kk.jpg', 16),
+(49, 'ASUS VivoBook X712EA-AU693 Notebook', 'Laptop', 129900, '49_nk.jpg', '49_kk.jpg', 16),
 (50, 'ASUS X515EA-BQ1187 Notebook', 'Laptop', 174900, '50_nk.jpg', '50_kk.jpg', 35);
 
 --
--- Indexek a kiirt tablakhoz
+-- Indexek a kiírt táblákhoz
 --
 
 --
--- A tabla indexei `termek`
+-- A tábla indexei `termek`
 --
 ALTER TABLE `termek`
   ADD PRIMARY KEY (`id`);
 
 --
--- A kiirt tablak AUTO_INCREMENT erteke
+-- A kiírt táblák AUTO_INCREMENT értéke
 --
 
 --
--- AUTO_INCREMENT a tablahoz `termek`
+-- AUTO_INCREMENT a táblához `termek`
 --
 ALTER TABLE `termek`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
