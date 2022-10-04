@@ -8,49 +8,38 @@
 <meta charset="UTF-8">
 <title>Tóth Viktor webáruháza</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<style>
-  table, td, th, tr{
-    border-collapse: collapse;
-    border:1px solid black;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
 </head>
 <body>
-<div class="p-5 bg-primary text-white text-center">
-  <h1>Tóth Viktor</h1>
-  <p>Vásárolj anti bc eszközöket ;)</p> 
-</div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<?php
+  include('header.php');
+?>
+<nav class="mt-0 navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link"  href="index.php">Minden termék</a>
+        <a class="nav-link" href="index.php">Minden termék</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="videokamera.php">Videókamera</a>
+        <a class="nav-link" href="videokamera.php">Videókamera</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  href="telefon.php">Telefon</a>
+        <a class="nav-link active" href="telefon.php">Telefon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="tv.php">TV</a>
+        <a class="nav-link" href="tv.php">TV</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="laptop.php">Laptop</a>
+        <a class="nav-link" href="laptop.php">Laptop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="okosora.php">Okosóra</a>
+        <a class="nav-link" href="okosora.php">Okosóra</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<table>
-<br>
 <?php
 $servername = "localhost";
 $username = "vitya0717";
@@ -69,6 +58,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
+  echo "<table class='table table-striped p-0 m-0'>";
   echo "<tr>";
   
   echo 
@@ -100,12 +90,12 @@ if (mysqli_num_rows($result) > 0) {
 } else {
   echo "0 találat";
 }
+echo "</table>";
 
 mysqli_close($conn);
 ?>
 
-</table>
-<div class="mt-5 p-4 bg-dark text-white text-center">
+<div class="p-4 m-0 bg-dark text-white text-center">
   <p>Footer</p>
 </div>
 </body>
