@@ -7,9 +7,17 @@
 
 <meta charset="UTF-8">
 <title>Tóth Viktor webáruháza</title>
-<link rel="stylesheet" href="webaruhaz.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  table, td, th, tr{
+    border-collapse: collapse;
+    border:1px solid black;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
 </head>
 <body>
 <div class="p-5 bg-primary text-white text-center">
@@ -20,16 +28,22 @@
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" href="index.php">Minden termék</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="webaruhaz/index.php">Webáruház</a>
+        <a class="nav-link" href="videokamera.php">Videókamera</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="telefon.php">Telefon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="tv.php">TV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="laptop.php">Laptop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="okosora.php">Okosóra</a>
       </li>
     </ul>
   </div>
@@ -62,8 +76,7 @@ if (mysqli_num_rows($result) > 0) {
    "<th>Termék neve</th> ".
    "<th>Kategória</th> " .
    "<th>Termék ára </th>" .
-   "<th>Termék képe nagy</th> " .
-   "<th>Termék képe kicsi </th>". 
+   "<th>Fotó</th>". 
    "<th>Mennyiség </th>";
 
    echo "</tr>";
@@ -73,14 +86,15 @@ if (mysqli_num_rows($result) > 0) {
   
     echo "<tr>" ;
 
-    echo "<td>" .$row["id"]. "</td>" .
+    echo 
+     "<td>" .$row["id"]. "</td>" .
      "<td>" .$row["termek_neve"]."</td>" .
      "<td>" .$row["kategoria"]."</td>" .
-     "<td>" .$row["termek_ara"]."</td>" .
-     "<td>" .$row["termek_kepe_nagy"]."</td>" .
-     "<td>" .$row["termek_kepe_kicsi"]."</td>" .
-     "<td>" .$row["mennyiseg"]."</td>" ;
-     echo "</tr>" ;
+     "<td>" .$row["termek_ara"]."</td>".
+     "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" alt=\"\" height=\"200\" widht=\"300\" class=\"img-fluid\" style=\"max-width=\"300\"\"></td>";
+	 
+    echo "<td>" .$row["mennyiseg"]."</td>" ;
+    echo "</tr>" ;
 
   }
 } else {
