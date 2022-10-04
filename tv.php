@@ -41,20 +41,7 @@
 </nav>
 
 <?php
-$servername = "localhost";
-$username = "vitya0717";
-$password = "123456789";
-$dbname = "vitya0717";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Kapcsolódási hiba: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM termek WHERE kategoria = 'TV'";
-$result = mysqli_query($conn, $sql);
+include("mysql.php");
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
@@ -95,7 +82,7 @@ echo "</table>";
 mysqli_close($conn);
 ?>
 
-<?php include("footer.php") ?>
+<?php include("footer.php"); ?>
 </body>
 
 <html>
