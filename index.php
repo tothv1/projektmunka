@@ -95,9 +95,7 @@ echo "</table>";
 mysqli_close($conn);
 ?>
 
-<div class="p-4 m-0 bg-dark text-white text-center">
-  <p>Footer</p>
-</div>
+<?php include("footer.php") ?>
 </body>
 
 <html>
