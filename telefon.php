@@ -43,6 +43,9 @@
 <?php
 include("mysql.php");
 
+$sql = "SELECT * FROM termek WHERE kategoria = 'Telefon'";
+$result = mysqli_query($conn, $sql);
+
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   echo "<table class='table table-striped p-0 m-0'>";

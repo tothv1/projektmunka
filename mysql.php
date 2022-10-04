@@ -10,6 +10,4 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
   die("Kapcsolódási hiba: " . mysqli_connect_error());
 }
-
-$sql = "SELECT * FROM termek";
-$result = mysqli_query($conn, $sql);?>
+?>
