@@ -15,7 +15,7 @@
 <?php
   include('header.php');
 ?>
-<nav class="mt-0 navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="mb-5 navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -40,19 +40,20 @@
   </div>
 </nav>
 
+<div class="container">
 <?php
 include("mysql.php");
 
 $sql = "SELECT * FROM termek WHERE kategoria = 'Okosora'";
 $result = mysqli_query($conn, $sql);
-
+$sorszam = 1;
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   echo "<table class='table table-striped p-0 m-0'>";
   echo "<tr>";
   
   echo 
-   "<th>ID</th>" .
+   "<th>Sorszám</th>" .
    "<th>Termék neve</th> ".
    "<th>Kategória</th> " .
    "<th>Termék ára </th>" .
@@ -67,14 +68,15 @@ if (mysqli_num_rows($result) > 0) {
     echo "<tr>" ;
 
     echo 
-     "<td>" .$row["id"]. "</td>" .
+     "<td>" .$sorszam. "</td>" .
      "<td>" .$row["termek_neve"]."</td>" .
      "<td>" .$row["kategoria"]."</td>" .
-     "<td>" .$row["termek_ara"]."</td>".
+     "<td>" .$row["termek_ara"]." Ft</td>".
      "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" alt=\"\" height=\"200\" widht=\"300\" class=\"img-fluid\" style=\"max-width=\"300\"\"></td>";
 	 
     echo "<td>" .$row["mennyiseg"]."</td>" ;
     echo "</tr>" ;
+    $sorszam++;
 
   }
 } else {
@@ -84,6 +86,7 @@ echo "</table>";
 
 mysqli_close($conn);
 ?>
+</div>
 <?php include("footer.php"); ?>
 </body>
 
