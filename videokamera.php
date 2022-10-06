@@ -41,7 +41,7 @@
     </ul>
   </div>
 </nav>
-<div class="container">
+<div class="container-fluid">
 <?php
 include("mysql.php");
 

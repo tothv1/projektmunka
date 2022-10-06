@@ -40,7 +40,7 @@
     </ul>
   </div>
 </nav>
-<div class="container">
+<div class="container-fluid">
 <?php
 include("mysql.php");
 
@@ -72,7 +72,7 @@ if (mysqli_num_rows($result) > 0) {
      "<td>" .$row["termek_neve"]."</td>" .
      "<td>" .$row["kategoria"]."</td>" .
      "<td>" .$row["termek_ara"]." Ft</td>".
-     "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" alt=\"\" height=\"200\" widht=\"300\" class=\"img-fluid\" style=\"max-width=\"300\"\"></td>";
+     "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" class=\"img-fluid\"></td>";
 	 
     echo "<td>" .$row["mennyiseg"]."</td>" ;
     echo "</tr>" ;
