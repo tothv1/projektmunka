@@ -20,6 +20,9 @@
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
+        <a class="nav-link" href="kezdolap.php">Kezdőlap</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link active" href="index.php">Minden termék</a>
       </li>
       <li class="nav-item">
