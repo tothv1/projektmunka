@@ -43,12 +43,30 @@
     </ul>
   </div>
 </nav>
-<div class="container">
+<div class="container mb-3">
 		<h2 class="text-center" style="margin-bottom:20; margin-top:20px"> ÜDVÖZÖLLEK A WEBÁRUHÁZAMBAN!</h2>
 	
-    <div>
-      <img class="w-100 mb-3" src="kep1.jpg" alt="">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="slide1.jpg" width="600" height="500" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="slide2.jpg" width="600" height="500" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="slide3.jpg" width="600" height="500" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
   </div>
 
