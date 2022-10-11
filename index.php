@@ -13,9 +13,13 @@
 <link rel="stylesheet" href="webaruhaz.css">
 </head>
 <body>
-<?php
-  include('header.php');
-?>
+<div class="container">
+		<div class="_jumbotron text-center" style="margin: 20px;">
+		<h4><img alt="" src="taki.png">&nbsp;<img alt="" src="kandoikon.png" style="width:32px; height:32px">&nbsp; MSZC Kandó Kálmán Informatikai Technikum</h4>
+		<h3>kandoikt (teszt) Webáruháza</h3>
+		</div>
+	</div>
+  
 <nav class="mb-5 navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
