@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
     echo 
      "<td>" .$sorszam. "</td>" .
      "<td>" .$row["termek_neve"]."</td>" .
-     "<td>" .$row["kategoria"]."</td>" .
+     "<td>" .$row["kategoria_id"]."</td>" .
      "<td>" .$row["termek_ara"]." Ft</td>".
      "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" class=\"img-fluid\"></td>";
 	 
