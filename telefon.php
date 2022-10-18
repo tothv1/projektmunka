@@ -50,7 +50,7 @@
 <?php
 include("mysql.php");
 
-$sql = "SELECT * FROM termek WHERE kategoria = 'Telefon'";
+$sql = "SELECT * FROM termek WHERE kategoria_id = '2'";
 $result = mysqli_query($conn, $sql);
 
 $sorszam = 1;
