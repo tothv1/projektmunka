@@ -49,7 +49,7 @@
 <?php
 include("mysql.php");
 
-$sql = "SELECT * FROM termek WHERE kategoria_id = '5'";
+$sql = "SELECT * FROM termek, kategoria WHERE termek.kategoria_id = kategoria.id AND kategoria.kategoria_neve = 'Okosora'";
 $result = mysqli_query($conn, $sql);
 $sorszam = 1;
 if (mysqli_num_rows($result) > 0) {
@@ -75,7 +75,7 @@ if (mysqli_num_rows($result) > 0) {
     echo 
      "<td>" .$sorszam. "</td>" .
      "<td>" .$row["termek_neve"]."</td>" .
-     "<td>" .$row["kategoria_id"]."</td>" .
+     "<td>" .$row["kategoria_neve"]."</td>" .
      "<td>" .$row["termek_ara"]."</td>".
      "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" class=\"img-fluid\"></td>";
 	 

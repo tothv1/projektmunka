@@ -50,13 +50,12 @@
 <?php
 include("mysql.php");
 
-$sql = "SELECT * FROM termek WHERE kategoria_id = '2'";
+$sql = "SELECT * FROM termek, kategoria WHERE termek.kategoria_id = kategoria.id AND kategoria.kategoria_neve = 'Telefon'";
 $result = mysqli_query($conn, $sql);
 
 $sorszam = 1;
 
 if (mysqli_num_rows($result) > 0) {
-  $sorszam++;
   // output data of each row
   echo "<table class='table table-striped p-0 m-0'>";
   echo "<tr>";
@@ -70,6 +69,7 @@ if (mysqli_num_rows($result) > 0) {
    "<th>Mennyiség </th>";
 
    echo "</tr>";
+   $sorszam++;
 
 
   while($row = mysqli_fetch_assoc($result)) {
@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
     echo 
      "<td>" .$sorszam. "</td>" .
      "<td>" .$row["termek_neve"]."</td>" .
-     "<td>" .$row["kategoria_id"]."</td>" .
+     "<td>" .$row["kategoria_neve"]."</td>" .
      "<td>" .$row["termek_ara"]." Ft</td>".
      "<td><img src=\"fotok/$row[termek_kepe_kicsi]\" class=\"img-fluid\"></td>";
 	 
