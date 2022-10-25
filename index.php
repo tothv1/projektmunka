@@ -11,9 +11,31 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="webaruhaz.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <body>
-  
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "type": "opt-in",
+  "content": {
+    "message": "Az oldal sütiket használ, fogadd el vagy taka...",
+    "dismiss": "Elutasítás",
+    "allow": "Sütik engedélyezése",
+    "link": "Szabályzat",
+    "href": "https://www.google.com"
+  }
+});
+</script>
 <?php
   include('header.php');
 ?>
