@@ -2,12 +2,12 @@ body {
     padding: 0;
     margin: 0;
     background-color: #E6C661;
+    font-family:'Courier New', Courier, monospace;
 }
 .nav {
-    font-family:'Courier New', Courier, monospace;
     color: #3750A6;
     padding: 0px;
-    margin: 0px;
+    margin-right:40px;
     float: left;
     background-color: #C4A030;
     width: 25vw;
@@ -51,17 +51,20 @@ body {
     overflow: auto;
 }
 
-#for {
+.hiddenElements {
     visibility: hidden;
     display: none;
 }
 
-#while {
-    visibility: hidden;
-    display: none;
+.contentBox {
+    width: 500px;
+    height: 400px;
 }
-
-#dowhile {
-    visibility: hidden;
-    display: none;
+.program {
+    width: fit-content;
+    background-color: gray;
+    font-family: "python";
+}
+div.code {
+    white-space: pre;
 }
