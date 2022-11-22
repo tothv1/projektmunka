@@ -5,23 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Python gyorstalpaló</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="webaruhaz.css">
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>-->
+    <link rel="stylesheet" href="style/webaruhaz.css">
+    <script src="javascript/script.js"></script>
 </head>
-
 <body>
-  <?php
-    include('header.php');
-  ?>
-<nav class="mb-5 navbar navbar-expand-sm bg-dark navbar-dark">
+<!--<nav class="mb-5 navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
         <div class="dropdown">
-          <button type="button" class="btn btn-primary dropdown-toggle m-1" data-bs-toggle="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
             Ciklusok
           </button>
           <ul class="dropdown-menu">
@@ -55,7 +51,46 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav>-->
+<div class="nav">
+  <div class="logo">
+    <img src="assets/Python-logo.png" height="200px" alt="python-logója">
+    <h1>Python gyorstalpaló</h1>
+  </div>
+  <div class="nav-box">
+    <a id="elag" onclick="dropdown(this.id)" value="elaga" class="nav-item">Elágazások  ▼</a>
+    <div id="elaga" class="dropdown-div">
+      <a href="#">Feltételes utasítások</a>
+      <a href="#">Logikai kifejezések</a>
+      <a href="#">Véletlenszámok</a>
+    </div>
+  </div>
+  <div class="nav-box">
+    <a id="ciklus" onclick="dropdown(this.id)" value="cikl" class="nav-item">Ciklusok  ▼</a>
+    <div id="cikl" class="dropdown-div">
+      <a href="#" onclick="megjelenites('for')">For ciklus</a>
+      <a href="#" onclick="megjelenites('while')">While ciklus</a>
+      <a href="#" onclick="megjelenites('dowhile')">Do-while ciklus</a>
+    </div>
+  </div>
+  <div class="nav-box">
+    <a id="file" onclick="dropdown(this.id)" value="fil" class="nav-item">Fájl kezelés  ▼</a>
+    <div id="fil" class="dropdown-div">
+      <a href="#">Fájl olvasás</a>
+      <a href="#">Fájl írás</a>
+    </div>
+  </div>
+  <div class="nav-box">
+    <a id="fugg" onclick="dropdown(this.id)" value="fug" class="nav-item">Függvények  ▼</a>
+    <div id="fug" class="dropdown-div">
+      <a href="#">Létrhozás, meghívás</a>
+      <a href="#">Visszatérő függvény</a>
+    </div>
+  </div>
+</div>
+<div class="">
+
+</div>
 <div id="for">
     <p>Ez a for ciklus</p>
 </div>
@@ -66,7 +101,6 @@
     <p>Ez a dowhile ciklus</p>
 </div>
 
-<?php include("footer.php") ?>
 
 </body>
 
