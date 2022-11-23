@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>-->
     <link rel="stylesheet" href="style/prism.css">
     <link rel="stylesheet" href="style/webaruhaz.css">
-    <script src="javascript/prism.js"></script>
     <script src="javascript/script.js"></script>
 </head>
 <body>
@@ -54,61 +53,97 @@
     </ul>
   </div>
 </nav>-->
-<div class="nav">
+<div id="nav-vanta" class="nav">
   <div class="logo">
     <img src="assets/Python-logo.png" height="200px" alt="python-logója">
     <h1>Python gyorstalpaló</h1>
   </div>
   <div class="nav-box">
-    <a id="elag" onclick="dropdown(this.id)" value="elaga" class="nav-item">Elágazások  ▼</a>
-    <div id="elaga" class="dropdown-div">
+    <a onclick="dropdown()" value="elag" class="nav-item">Elágazások  ▼</a>
+    <div id="elag" class="dropdown-div">
       <a href="#">Feltételes utasítások</a>
       <a href="#">Logikai kifejezések</a>
       <a href="#">Véletlenszámok</a>
     </div>
   </div>
   <div class="nav-box">
-    <a id="ciklus" onclick="dropdown(this.id)" value="cikl" class="nav-item">Ciklusok  ▼</a>
-    <div id="cikl" class="dropdown-div">
+    <a onclick="dropdown()" value="ciklus" class="nav-item">Ciklusok  ▼</a>
+    <div id="ciklus" class="dropdown-div">
       <a href="#" onclick="megjelenites('for')">For ciklus</a>
       <a href="#" onclick="megjelenites('while')">While ciklus</a>
       <a href="#" onclick="megjelenites('dowhile')">Do-while ciklus</a>
     </div>
   </div>
   <div class="nav-box">
-    <a id="file" onclick="dropdown(this.id)" value="fil" class="nav-item">Fájl kezelés  ▼</a>
-    <div id="fil" class="dropdown-div">
+    <a onclick="dropdown()" value="file" class="nav-item">Fájl kezelés  ▼</a>
+    <div id="file" class="dropdown-div">
       <a href="#">Fájl olvasás</a>
       <a href="#">Fájl írás</a>
     </div>
   </div>
   <div class="nav-box">
-    <a id="fugg" onclick="dropdown(this.id)" value="fug" class="nav-item">Függvények  ▼</a>
+    <a onclick="dropdown()" value="fug" class="nav-item">Függvények  ▼</a>
     <div id="fug" class="dropdown-div">
       <a href="#">Létrhozás, meghívás</a>
       <a href="#">Visszatérő függvény</a>
     </div>
   </div>
 </div>
-<div class="contentBox hiddenElements" id="for">
-    <p>Ez a for ciklus</p>
-</div>
-<div class="contentBox hiddenElements" id="while">
-    <h2>While ciklus I.</h2>
-    <br>
-    <pre>
-    <code class="language-python">
-      szam = 1
-      while szam <= 10:
-        print(szam)
-        szam = szam + 1 
-    </code>
+<!--Az elrejtett elemeket így kéne létrehozni-->
+<div id="while" class="hiddenElements contentBox">
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("A cigik meghalnak!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
+  </pre>
+  <br>
+  <span>Hello World</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">print("Hello World!")</code>
   </pre>
 </div>
-<div class="hiddenElements" id="dowhile">
-  <p>asd</p>
-</div>
 
+
+
+<script src="javascript/prism.js"></script>
 </body>
 
 <html>
