@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="style/prism.css">
     <link rel="stylesheet" href="style/webaruhaz.css">
     <script src="javascript/script.js"></script>
+    <script src="javascript/prism.js"></script>
+
 </head>
-<body>
+<body> 
 <div id="nav-vanta" class="nav">
   <div class="logo">
     <img src="assets/Python-logo.png" height="200px" alt="python-logója">
@@ -105,18 +107,26 @@
       </code>
   </pre>
 </div>
+
+<!--FOR CIKLUS RÉSZ-->
 <div id="for" class="hiddenElements contentBox">
   <br>
-  <span>While ciklus I.</span>
+  <span>For ciklus I.</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
     <code class="language-python">
-      # while magyarul azt jelenti: amíg
+      # A for ciklus egy folyamatvezérlő utasítás
       
-      szam = 1
-      while szam <= 10:
-        print(szam)
-        szam = szam + 1      
+      # Adott egy gyumi tömb
+      
+      gyumi = ['alma', 'körte', 'szilva', 'barack']
+      
+      #A for ciklus segítségével kiírjuk a gyumi tömb elemeit sorba
+      # Az i a ciklus indexét is jelölheti azaz folyamatosan növeli magát 1-gyel!(Erről később bővebben lesz infó)
+      # A range() jelöli, hogy meddig menjen a ciklus
+      # A len(gyumi) megadja az adott tömb hosszát
+      for i in range(len(gyumi)):
+        print(gyumi[i])
       </code>
   </pre>
   <br>
@@ -133,8 +143,6 @@
       </code>
   </pre>
 </div>
-
-<script src="javascript/prism.js"></script>
 </body>
 
 <html>
