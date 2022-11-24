@@ -13,46 +13,6 @@
     <script src="javascript/script.js"></script>
 </head>
 <body>
-<!--<nav class="mb-5 navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <div class="dropdown">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-            Ciklusok
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" onclick="megjelenites('for')">For ciklus</a></li>
-            <li><a  class="dropdown-item" href="#" onclick="megjelenites('while')">While ciklus</a></li>
-            <li><a class="dropdown-item" href="#" onclick="megjelenites('dowhile')">Do-while ciklus</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="dropdown">
-          <button type="button" class="btn btn-primary dropdown-toggle m-1" data-bs-toggle="dropdown">
-            Fájl kezelés
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Fájl olvasás</a></li>
-            <li><a class="dropdown-item" href="#">Fájl írás</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item">
-        <div class="dropdown">
-          <button type="button" class="btn btn-primary dropdown-toggle m-1" data-bs-toggle="dropdown">
-            Függvények
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Létrhozás, meghívás</a></li>
-            <li><a class="dropdown-item" href="#">Visszatérő függvény</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>-->
 <div id="nav-vanta" class="nav">
   <div class="logo">
     <img src="assets/Python-logo.png" height="200px" alt="python-logója">
@@ -92,56 +52,87 @@
 <!--Az elrejtett elemeket így kéne létrehozni-->
 <div id="while" class="hiddenElements contentBox">
   <br>
-  <span>Hello World</span>
+  <span>While ciklus I.</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("A cigik meghalnak!")</code>
+    <code class="language-python program">
+      # while magyarul azt jelenti: amíg
+      
+      szam = 1
+      while szam <= 10:
+        print(szam)
+        szam = szam + 1      
+      </code>
   </pre>
   <br>
-  <span>Hello World</span>
+  <span>While ciklus II.</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
+    <code class="language-python program">
+      szamlalo = 1
+
+      while szamlalo <= 5:
+          print('Programozni jó!')
+          szamlalo = szamlalo + 1      
+      </code>
   </pre>
   <br>
-  <span>Hello World</span>
+  <span>While ciklus III.</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
+    <code class="language-python program">
+      folytatja = True
+      while folytatja:
+          print('Vidd ki a szemetet!')
+          valasz = input('Mondjam még egyszer? (i/n)')
+          if valasz == 'n':
+              folytatja = False
+      print('>> Program vége! <<')      
+      </code>
   </pre>
   <br>
-  <span>Hello World</span>
+  <span>Adatbekérés while-ciklussal (szám bekérése megadott intervallumban)</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
-  </pre>
-  <br>
-  <span>Hello World</span>
-  <pre class="language-python">
-    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
-  </pre>
-  <br>
-  <span>Hello World</span>
-  <pre class="language-python">
-    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
-  </pre>
-  <br>
-  <span>Hello World</span>
-  <pre class="language-python">
-    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
-  </pre>
-  <br>
-  <span>Hello World</span>
-  <pre class="language-python">
-    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
-    <code class="language-python">print("Hello World!")</code>
+    <code class="language-python program">
+      szam = int(input('Adj meg egy számot 5 és 10 között! '))
+    
+      # while szam < 5 or 10 < szam:
+      while not 5 <= szam <= 10:
+          szam = int(input('Helytelen érték! Adj meg egy számot 5 és 10 között! '))
+      
+      print('Rendben!')     
+      </code>
   </pre>
 </div>
-
-
+<div id="for" class="hiddenElements contentBox">
+  <br>
+  <span>While ciklus I.</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">
+      # while magyarul azt jelenti: amíg
+      
+      szam = 1
+      while szam <= 10:
+        print(szam)
+        szam = szam + 1      
+      </code>
+  </pre>
+  <br>
+  <span>While ciklus I.</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">
+      # while magyarul azt jelenti: amíg
+      
+      szam = 1
+      while szam <= 10:
+        print(szam)
+        szam = szam + 1      
+      </code>
+  </pre>
+</div>
 
 <script src="javascript/prism.js"></script>
 </body>

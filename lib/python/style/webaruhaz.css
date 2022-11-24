@@ -1,15 +1,17 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #E6C661;
+    background: linear-gradient(to right, rgba(39, 68, 165, 0.1),rgba(209, 169, 39, 0.3)) fixed;
+    /*background-color: #E6C661;*/
     font-family:'Courier New', Courier, monospace;
 }
+
 .nav {
-    color: #3750A6;
+    color: steelblue;
     padding: 0px;
-    margin-right:40px;
+    margin-right: 40px;
     float: left;
-    background-color: #C4A030;
+    background-image: linear-gradient(to right, rgba(55, 80, 166,0.1),rgba(55, 80, 166, 0.3));
     width: 25vw;
     height: 100vh;
     overflow:auto;
@@ -35,7 +37,8 @@ body {
 .dropdown-div a {
     display: block;
     text-decoration: none;
-    color: #3750A6;
+    color: steelblue;
+    /*color: #3750A6;*/
     font-size: 20px;
     font-weight: bold;
     padding: 15px;
@@ -44,7 +47,7 @@ body {
 .dropdown-div a:hover {
     display: block;
     background-color: #E6C661;
-    color: #3750A6;
+    color: blue;
     padding: 15px;
 }
 .show {
@@ -63,11 +66,10 @@ body {
 
 .contentBox {
     padding: 0px;
-    margin: 0px;
-    width: 500px;
+    width: 1000px;
     position: relative;
     float: left;
-    left: 29vw;
+    left: 35vw;
 }
 
 ::-webkit-scrollbar {
