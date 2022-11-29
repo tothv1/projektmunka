@@ -130,16 +130,26 @@
       </code>
   </pre>
   <br>
-  <span>While ciklus I.</span>
+  <span>For ciklus II.</span>
   <pre class="language-python">
     <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
     <code class="language-python">
-      # while magyarul azt jelenti: amíg
+      # A for ciklus lépéseit meghatározó adatokból max. 3-at adhatunk meg:
+      # 1 adat esetében a ciklus végét határozza meg
+      # 2 adat esetében az első a ciklus elejét, a második a ciklus végét határozza meg
+      # 3 adat esetében az első a ciklus elejét, a második a ciklus végét, a harmadik a lépés méretét határozza meg
+
+      #1 adat, ciklus vége, 1-10 ig számol
+      for i in range(10):
+        print(i)
       
-      szam = 1
-      while szam <= 10:
-        print(szam)
-        szam = szam + 1      
+      #2 adat, a első a kezdés, a második a vége, 5-15 ig száol
+      for i in range(5,15):
+        print(i)
+
+      #3 adat, a első a kezdés, a második a vége, 10-20 ig számol kettesével
+      for i in range(10,20,2):
+        print(i)
       </code>
   </pre>
 </div>

@@ -1,11 +1,13 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, rgba(39, 68, 165, 0.1),rgba(209, 169, 39, 0.3)) fixed;
+    background: linear-gradient(to right, rgba(20, 20, 70, 1),rgba(20, 20, 70, 1),rgba(20, 20, 70, 1),rgba(39, 40, 34, 1),rgba(39, 40, 34, 1)) fixed;
     /*background-color: #E6C661;*/
     font-family:'Courier New', Courier, monospace;
 }
-
+span {
+    color:steelblue;
+}
 .nav {
     color: steelblue;
     padding: 0px;
@@ -13,14 +15,6 @@ body {
     float: left;
     background-image: linear-gradient(to right,
      rgba(20, 20, 70, 1),
-     rgba(20, 20, 70, 0.9),
-     rgba(20, 20, 70, 0.8),
-     rgba(20, 20, 70, 0.7),
-     rgba(20, 20, 70, 0.6),
-     rgba(20, 20, 70, 0.5),
-     rgba(20, 20, 70, 0.4),
-     rgba(20, 20, 70, 0.3),
-     rgba(20, 20, 70, 0.2),
      rgba(20, 20, 70, 0));
     width: 25vw;
     height: 100vh;
