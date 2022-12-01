@@ -72,6 +72,11 @@ span {
 
 }
 
+.intro {
+    text-align: center;
+    color:steelblue;
+}
+
 .contentBox {
     padding: 0px;
     width: 1000px;
