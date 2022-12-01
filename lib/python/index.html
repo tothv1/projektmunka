@@ -21,8 +21,16 @@
     <h1>Python gyorstalpaló</h1>
   </div>
   <div class="nav-box">
+    <a onclick="dropdown()" value="ops" class="nav-item">Operátorok  ▼</a>
+    <div id="ops" class="dropdown-div">
+      <a href="#" onclick="megjelenites('opsBasic')">Alapvető operátorok</a>
+      <a href="#" onclick="megjelenites('opsYeet')">xd</a>
+    </div>
+  </div>
+  <div class="nav-box">
     <a onclick="dropdown()" value="elag" class="nav-item">Elágazások  ▼</a>
     <div id="elag" class="dropdown-div">
+      <a href="#" onclick="megjelenites('if')">Az IF elágazás</a>
       <a href="#">Feltételes utasítások</a>
       <a href="#">Logikai kifejezések</a>
       <a href="#">Véletlenszámok</a>
@@ -78,6 +86,88 @@
 </div>
 
 <!--Az elrejtett elemeket így kéne létrehozni-->
+
+<!--OPERÁTOROK RÉSZ-->
+<div id="opsBasic" class="hiddenElements contentBox">
+  <br>
+  <span>Alapvető operátorok</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">
+      # Az operátorokat különböző vizsgálatokhoz, vagy épp változók manipulálásához használjuk.
+
+      # A + operátorral két számot adhatunk össze:
+      
+      a=5
+      b=10
+      c=a+b
+      #A c változó a és b összege lesz, ez esetben 15.
+
+      #Valamint szövegeket is egymáshoz fűzhetünk:
+
+      s1="krumpli"
+      s2="kenyér"
+      s3=s1+s2
+      #Az s3 változó s1 és s2 egymás mellé fűzött szövege lesz, ezesetben krumplikenyér.
+
+      #A - operátorral szövegeket már nem tudunk kezelni, csak számokat:
+
+      szam1=10
+      szam2=5
+      szam3=szam1-szam2
+      #A szam3 változó szam1 és szam2 különbsége lesz, ezesetben 5.
+
+      #A / operátorral két számot oszthatunk el, eredményként megkapjuk, hányszor osztható.
+
+      yeet1=20
+      yeet2=6
+      yeet3=yeet1/yeet2
+      #A yeet3 változó eredménye yeet1, osztva yeet 2-vel lesz, ezesetben 3.33333333333333333333333333333333333333333333333333333333-
+
+      </code>
+  </pre>
+  <br>
+</div>
+
+<div id="opsYeet" class="hiddenElements contentBox">
+  <br>
+  <span>kisebb/nagyobb operátorok</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">
+
+      kecske xd
+    </code>
+  </pre>
+  <br>
+</div>
+
+<!--ELÁGAZÁS RÉSZ-->
+<div id="if" class="hiddenElements contentBox">
+  <br>
+  <span>IF elágazás</span>
+  <pre class="language-python">
+    <!--A <code> tagbe kell írni a python kódot, a language-python osztály megadása után -->
+    <code class="language-python">
+      # Az IF elágazással adatokat vizsgálhatunk, hogy különböző esetekben különböző módon járjunk el.
+      # Adott két szám- 5, és 10.
+      
+      a=5
+      b=10
+
+      #Egy IF elágazással megvizsgálhatjuk hogy két szám közül melyik nagyobb, használva egy kisebb/nagyobb operátort.
+
+      if a < b:
+        print("Az a változó kisebb, mint b.")
+
+      
+    </code>
+  </pre>
+  <br>
+</div>
+
+
+<!--ITT VAN A WHILE XD-->
 <div id="while" class="hiddenElements contentBox">
 
   <br>
