@@ -25,11 +25,9 @@ def feladat_2():
     stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: "))-1
     outputText = ""
     asd = ""
-
     if len(inputText) == 1:
         print(inputText)
         return
-
     if len(inputText) >= stripCharIndex:
         if inputText[stripCharIndex] != ' ':
             for i in range(len(inputText)):
