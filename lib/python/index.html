@@ -180,16 +180,19 @@
         inputText = input("Kérek egy szöveget: ")
         stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: "))
         outputText = ""
+        asd = ""
+    
+        if len(inputText) == 1:
+            print(inputText)
+    
         if len(inputText) >= stripCharIndex:
             if inputText[stripCharIndex] != ' ':
                 for i in range(len(inputText)):
-                    if i == stripCharIndex:
-                        outputText += ' '
                     if i < stripCharIndex:
                         outputText += inputText[i]
-                    else:
-                        outputText += inputText[stripCharIndex]
-                print(outputText)
+                for i in range(stripCharIndex, len(inputText)):
+                    asd += inputText[i]
+                print(asd+outputText)
             else:
                 print("Nemlétező karakter")
         else:
