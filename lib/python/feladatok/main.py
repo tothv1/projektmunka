@@ -28,6 +28,7 @@ def feladat_2():
 
     if len(inputText) == 1:
         print(inputText)
+        return
 
     if len(inputText) >= stripCharIndex:
         if inputText[stripCharIndex] != ' ':
