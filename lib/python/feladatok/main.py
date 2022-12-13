@@ -1,4 +1,5 @@
 import string
+import random
 
 
 def feladat_1():
@@ -165,9 +166,46 @@ def feladat_9():
     print("Vége!")
 
 
-feladat_9()
-
-
 def feladat_10():
-    # Írjunk programot, amely az ötöslottó számsorsolását modellezi!
-    pass
+    # 10.Írjunk programot, amely az ötöslottó számsorsolását modellezi!
+    import random
+    adatok = list()
+    for i in range(5):
+        veletlen = random.randint(1, 100)
+        adatok.append(veletlen)
+    print(adatok)
+
+
+# 16. Egy szövegből válogassuk ki a természetes számokat és adjuk össze! (Pl. „jd1;ö5kjl 41lkj” esetén 1+5+41=47 lesz az eredmény.)
+
+def feladat_16():
+    randomRawText = ""
+    outputText = ""
+    value = 0
+    number = ""
+    index = 0
+    for s in range(10):
+        randomChar = [random.choice(string.ascii_letters), random.choice(string.digits),
+                      random.choice(string.punctuation)]
+        randomRawText += random.choice(randomChar)
+    print(randomRawText)
+    if any(char.isdigit() for char in randomRawText):
+        for letter in randomRawText:
+            if letter.isdigit():
+                number += letter
+                if index == len(randomRawText) - 1 and randomRawText[-1].isdigit():
+                    outputText += number + "+"
+                    value += int(number)
+                    number = ""
+            else:
+                if number != "":
+                    outputText += number + "+"
+                    value += int(number)
+                    number = ""
+            index += 1
+        outputText = outputText.strip('+')
+        outputText += f"={value}"
+        print(outputText)
+    else:
+        print("Nincs szám a random szövegben!")
+
