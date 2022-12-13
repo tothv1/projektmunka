@@ -95,3 +95,42 @@ span {
     background-color: lavender;
     border-radius: 20px;
 }
+textarea {
+    resize: none;
+    overflow-block: auto;
+}
+.code-run-container {
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+    height: 30vw;
+    margin-top: 2%;
+    padding-left: 1.5%;
+    color: lavender;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    
+}
+.code-run-container h3 {
+    text-align: center;
+}
+
+pre {
+    width: 68vw;
+    height: 24vw;
+    background-color: black;
+    color: lavender;
+}
+
+.python-code, .output-code {
+    width: 68vw;
+    height: 24vw;
+    background-color: black;
+    color: lavender;
+}
+
+.run-code-button {
+    text-align: center;
+    padding: 10px;
+}
