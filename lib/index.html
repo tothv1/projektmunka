@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <title>Tóth Viktor oldala</title>
+  <title>Kiss Gergő oldala</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.onkeydown = function(e) {
+      if(event.keyCode == 123) {
+         return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+         return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+         return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+         return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+         return false;
+      }
+    }
+  </script>
   <style>
   .fakeimg {
     height: 200px;
@@ -13,11 +32,12 @@
   }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
+
 
 <div class="p-5 bg-white text-dark text-center">
   <img src="webaruhaz/assets/home_images/logo.webp" alt="">
-  <h3>Tóth Viktor</h3>
+  <h3>Kiss Gergő</h3>
   <p>Projektmunka weboldalam</p> 
 </div>
 
