@@ -23,18 +23,20 @@ def feladat_2():
     # Ezek után a szöveget írja ki úgy, hogy az adott karakterrel kezdődően a végéig tartó részt felcseréli az adott karakterig tartó résszel.
     # Amennyiben a szövegnek nincs az adott helyen karaktere, írja ki a "Nemlétező karakter" szöveget
     inputText = input("Kérek egy szöveget: ")
-    stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: "))
+    stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: "))-1
     outputText = ""
+    asd = ""
+    if len(inputText) == 1:
+        print(inputText)
+        return
     if len(inputText) >= stripCharIndex:
         if inputText[stripCharIndex] != ' ':
             for i in range(len(inputText)):
-                if i == stripCharIndex:
-                    outputText += ' '
                 if i < stripCharIndex:
                     outputText += inputText[i]
-                else:
-                    outputText += inputText[stripCharIndex]
-            print(outputText)
+            for i in range(stripCharIndex, len(inputText)):
+                asd += inputText[i]
+            print(asd+outputText)
         else:
             print("Nemlétező karakter")
     else:
@@ -95,7 +97,41 @@ def feladat_5():
 def feladat_6():
     # Készítsen egy olyan programot, ami egy éééé.hh.nn formában adott  dátumról megmondja, hogy az adott év hányadik napja.
     # A program kezelje a szökőéveket is. (Egy évszám szökőév, ha 4-gyel osztható, de a 100-zal oszthatók nem szökőévek, kivéve, ha 400-zal oszthatók.)
-    pass
+    monthPool = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    monthdayPool = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    monthdayPoolSZ = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    dayPool = []
+
+    for i in range(1, 32):
+        dayPool.append(i)
+
+        usedPool = []
+        date = input("Adj meg egy dátumot! (ÉÉÉÉ.HH.NN)")
+        dateS = date.split(".")
+
+        if not date[0].isnumeric():
+            print("Hibás adat.")
+            return
+        if int(dateS[1]) not in monthPool:
+            print("Hibás adat.")
+            return
+        if int(dateS[2]) not in dayPool:
+            print("Hibás adat.")
+            return
+
+        if int(dateS[0]) % 4 != 0:
+            usedPool = monthdayPool
+        elif int(dateS[0]) % 400 == 0:
+            usedPool = monthdayPoolSZ
+        elif int(dateS[0]) % 100 == 0:
+            usedPool = monthdayPool
+        else:
+            usedPool = monthdayPoolSZ
+
+        xd = 0
+        for i in range(int(dateS[1]) - 1):
+            xd += usedPool[i]
+        print("Az év", str(xd + int(dateS[2])), ". napja.")
 
 
 def feladat_7():
@@ -149,11 +185,18 @@ def feladat_9():
     # A sorozat elején álló nulla értékek előjele lényegtelen.
     inp = int(input("Kezdésnek írj bármilyen egész számot!: "))
     prevNumber = inp
-    print(prevNumber)
     while vane:
         inputNumber = int(input("Lehetőleg ne írj be ugyanolyan előjelű számot!: "))
         if isNegative(inputNumber) != isNegative(prevNumber):
             vane = True
+        elif inputNumber == 0 and prevNumber < 0:
+            inputNumber = int(input("Lehetőleg ne írj be ugyanolyan előjelű számot!: "))
+            if isPositive(inputNumber):
+                vane = False
+        elif isZero(inputNumber) and isPositive(prevNumber):
+            inputNumber = int(input("Lehetőleg ne írj be ugyanolyan előjelű számot!: "))
+            if isNegative(inputNumber):
+                vane = False
         elif isZero(inputNumber) != isZero(prevNumber):
             vane = True
         elif isPositive(inputNumber) != isPositive(prevNumber):
@@ -161,8 +204,6 @@ def feladat_9():
         else:
             vane = False
         prevNumber = inputNumber
-        print(prevNumber)
-
     print("Vége!")
 
 
