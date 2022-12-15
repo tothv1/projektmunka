@@ -240,10 +240,6 @@ def feladat_15():
     split = re.split(f"[{string.punctuation} ]", inputName)
 
 
-
-feladat_15()
-
-
 # 16. Egy szövegből válogassuk ki a természetes számokat és adjuk össze! (Pl. „jd1;ö5kjl 41lkj” esetén 1+5+41=47 lesz az eredmény.)
 def feladat_16():
     randomRawText = ""
@@ -251,9 +247,8 @@ def feladat_16():
     value = 0
     number = ""
     index = 0
-    for s in range(10):
-        randomChar = [random.choice(string.ascii_letters), random.choice(string.digits),
-                      random.choice(string.punctuation)]
+    for s in range(5):
+        randomChar = [random.choice(string.ascii_letters), random.choice(string.digits),random.choice(string.punctuation)]
         randomRawText += random.choice(randomChar)
     print(randomRawText)
     if any(char.isdigit() for char in randomRawText):
@@ -276,12 +271,12 @@ def feladat_16():
     else:
         print("Nincs szám a random szövegben!")
 
+feladat_16()
 
 # 17. Kérjük be egy háromszög három oldalának (nem feltétlenül egész) hosszúságát, ellenőrizzük, hogy lehet-e háromszög három oldala, majd írjuk ki,
 # hogy egyenlő szárú háromszög, egyenlő oldalú háromszög vagy egyik sem.
 def isValidTriangle(a, b, c):
     return a + b > c and a + c > b and b + c > a
-
 
 def feladat_17():
     a = float(input("Kérem az első oldalt: "))
