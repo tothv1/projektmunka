@@ -1,4 +1,6 @@
+import re
 import string
+import random
 
 
 def feladat_1():
@@ -22,7 +24,7 @@ def feladat_2():
     # Ezek után a szöveget írja ki úgy, hogy az adott karakterrel kezdődően a végéig tartó részt felcseréli az adott karakterig tartó résszel.
     # Amennyiben a szövegnek nincs az adott helyen karaktere, írja ki a "Nemlétező karakter" szöveget
     inputText = input("Kérek egy szöveget: ")
-    stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: "))-1
+    stripCharIndex = int(input("Kérek egy indexet, ahol majd elvágjuk a bekért szöveget: ")) - 1
     outputText = ""
     asd = ""
     if len(inputText) == 1:
@@ -35,7 +37,7 @@ def feladat_2():
                     outputText += inputText[i]
             for i in range(stripCharIndex, len(inputText)):
                 asd += inputText[i]
-            print(asd+outputText)
+            print(asd + outputText)
         else:
             print("Nemlétező karakter")
     else:
@@ -206,9 +208,116 @@ def feladat_9():
     print("Vége!")
 
 
-feladat_2()
-
-
 def feladat_10():
-    # Írjunk programot, amely az ötöslottó számsorsolását modellezi!
-    pass
+    # 10.Írjunk programot, amely az ötöslottó számsorsolását modellezi!
+    import random
+    adatok = list()
+    for i in range(5):
+        veletlen = random.randint(1, 100)
+        adatok.append(veletlen)
+    print(adatok)
+
+
+# 14. Generáljon egy háromjegyű véletlenszámot és írja ki az összes pozitív osztóját vesszővel elválasztva.
+def feladat_14():
+    randomNumber = random.randint(100, 999)
+    print(f"A random szám: {randomNumber}")
+    db = 0
+    text = ""
+    for i in range(1, randomNumber + 1):
+        if randomNumber % i == 0 and i % 2 == 0:
+            db += 1
+            text += str(i) + ", "
+    if db >= 1:
+        print(f"A {randomNumber} szám pozitív osztói: {text[0:-2]}")
+    else:
+        print(f"A {randomNumber} szám pozitív osztói: NINCS")
+
+
+# 15. Kérjen be a felhasználó teljes nevét, majd írassa ki a monogramját. Tetszőleges számú keresztnévvel működjön! Kötőjellel írt (család)nevek esetében a kötőjel maradjon meg!
+def feladat_15():
+    inputName = input("Add meg a teljes nevedet: ")
+    split = re.split(f"[{string.punctuation} ]", inputName)
+
+
+
+feladat_15()
+
+
+# 16. Egy szövegből válogassuk ki a természetes számokat és adjuk össze! (Pl. „jd1;ö5kjl 41lkj” esetén 1+5+41=47 lesz az eredmény.)
+def feladat_16():
+    randomRawText = ""
+    outputText = ""
+    value = 0
+    number = ""
+    index = 0
+    for s in range(10):
+        randomChar = [random.choice(string.ascii_letters), random.choice(string.digits),
+                      random.choice(string.punctuation)]
+        randomRawText += random.choice(randomChar)
+    print(randomRawText)
+    if any(char.isdigit() for char in randomRawText):
+        for letter in randomRawText:
+            if letter.isdigit():
+                number += letter
+                if index == len(randomRawText) - 1 and randomRawText[-1].isdigit():
+                    outputText += number + "+"
+                    value += int(number)
+                    number = ""
+            else:
+                if number != "":
+                    outputText += number + "+"
+                    value += int(number)
+                    number = ""
+            index += 1
+        outputText = outputText.strip('+')
+        outputText += f"={value}"
+        print(outputText)
+    else:
+        print("Nincs szám a random szövegben!")
+
+
+# 17. Kérjük be egy háromszög három oldalának (nem feltétlenül egész) hosszúságát, ellenőrizzük, hogy lehet-e háromszög három oldala, majd írjuk ki,
+# hogy egyenlő szárú háromszög, egyenlő oldalú háromszög vagy egyik sem.
+def isValidTriangle(a, b, c):
+    return a + b > c and a + c > b and b + c > a
+
+
+def feladat_17():
+    a = float(input("Kérem az első oldalt: "))
+    b = float(input("Kérem a második oldalt: "))
+    c = float(input("Kérem a harmadik oldalt: "))
+
+    if isValidTriangle(a, b, c):
+        if a == b != c:
+            print("Ez egy egyenlő szárú háromszög!")
+        elif a == b == c:
+            print("Ez egy egyenlő oldalú háromszög!")
+        else:
+            print("Egyik sem!")
+    else:
+        print("Nem szerkeszthető meg a háromszög!")
+
+
+# 18. Kérjen be egy számot és döntse el, hogy prímszám-e!
+def isPrime(value):
+    divs = 0
+    if value <= 0 or value == 1:
+        return False
+    for div in range(1, value + 1):
+        if value % div == 0:
+            divs += 1
+    if divs > 2:
+        return False
+    elif divs == 2:
+        return True
+    else:
+        return False
+
+
+def feladat_18():
+    inputNumber = int(input("Kérek egy számot: "))
+    if isPrime(inputNumber):
+        print("Gratulálok, sikerült beírni egy prímszámot!")
+    else:
+        print("Sajnálom, de az általad beírt szám nem prímszám!")
